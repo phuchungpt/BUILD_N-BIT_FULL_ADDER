@@ -1,6 +1,3 @@
-../rtl/apb_slave.v 
-../rtl/register.v 
-../rtl/interrupt.v
-../rtl/counter_control.v
-../rtl/counter.v
-../rtl/timer_top.v
+../rtl/half_adder.v 
+../rtl/full_adder.v 
+../rtl/N_bit_full_adder.v
