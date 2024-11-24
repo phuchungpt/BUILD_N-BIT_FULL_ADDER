@@ -1,0 +1,31 @@
+################################################################
+#This file was created by Phuc Hung based on a template from Huy Nguyen.
+#Updated date: 6/30/2019
+#Example run string: make TESTNAME={name_of_testcase} {optional} 
+#                    make TESTNAME=counter test all
+################################################################
+#Define variables
+TESTNAME ?= test_adder
+TB_NAME ?= test bench
+RADIX ?= decimal
+
+all: build run
+
+build:
+  vlib work
+  vmap work work
+  vlog -f compile.f | tee compile.log
+
+run: 
+  vsim -debugDB -1 $(TESTNAME).log -voptargs=+acc -assertdebug -c $(TB_NAME) -do "log -r /*;run -all;" 
+
+wave:
+  vsim -i -view vsim.wlf -do "add wave vsim:/$(TB_NAME)/*; radix -$ (RADIX)" &
+
+clean:
+  rm -rf work
+  rm -rf vsim.dbg
+  rm -rf *.ini
+  rm -rf *.log
+  rm -rf *.wlf
+  rm -rf transcript
