@@ -15,4 +15,10 @@ Testbench: A single testbench is used to verify the design across different conf
 Half_adder to full_adder 
 ![image](https://github.com/user-attachments/assets/94fa10de-11ae-45f8-ab30-166655da5a7b)
 
+Simulation Ouput 
+![image](https://github.com/user-attachments/assets/f97427ed-a4e9-440b-8b18-8f013f7ba1b9)
+
+./
+
+
 
