@@ -3,9 +3,13 @@ This project involves the design and verification of an N-bit full adder with co
 
 Features:
 Half Adder: The design starts with the creation of a half adder.
+
 Full Adder: Multiple half adders are connected together to form a full adder.
+
 N-bit Full Adder: Full adders are connected to create an N-bit full adder, where N can be configured from 2 to 32 bits.
+
 Parameterized Configuration: The full adder is parameterized to allow for easy configuration of the bit-width (N) during simulation.
+
 Testbench: A single testbench is used to verify the design across different configurations by simply modifying the parameter for N in the testbench.
 
 Half_adder to full_adder 
